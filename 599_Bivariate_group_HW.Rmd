@@ -15,12 +15,12 @@ knitr::opts_chunk$set(echo = TRUE, warning=TRUE, message=TRUE)
 
 link="https://github.com/ihsun-uw/Group3_Final_Project/raw/master/child_mortality.dta"
 
-child_mort<-read_dta(url(link))
+#child_mort<-read_dta(url(link))
 
 ```
 
 Preparing the data
-```{r data_prep}
+```{r data_prep, include=FALSE}
 
 df1=df
 
