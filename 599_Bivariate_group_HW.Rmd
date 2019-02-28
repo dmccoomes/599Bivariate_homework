@@ -28,7 +28,8 @@ df_aggre <- aggregate(cbind(NEONAT_COMB , INFANT_COMB, U5M_COMB, birthatend, hwd
 
 ```
 
-Creating a box plot
+Creating a box plot 
+
 ```{r echo=TRUE, warning=FALSE}
 g <- ggplot(df, aes(x=reorder(provname,-U5M_COMB), y=U5M_COMB))
 g + geom_boxplot(varwidth=T, fill="grey80") + 
@@ -45,5 +46,35 @@ g + geom_boxplot(varwidth=T, fill="grey80") +
                     legend.box.just = c("right","center"), 
                     axis.text.x = element_text(size=7, angle = 45, vjust = 1, hjust=1)) 
 
+```
+
+
+Infant Mortality by Region in Mozambique Between 2000 to 2010
+
+**Guys, can you help me in figureing out how to get ride of the warning here about the misssing 4 rows?**
+```{r}
+
+base2 = ggplot(df,aes(x=provname, y=INFANT_COMB))
+mins1 = base2 + stat_summary(fun.y=min, # function for 'y' is min()
+                           geom="line",
+                           show.legend = T,size=1,
+                           aes(group=1,col='Min'))
+minsMaxs1= mins1 + stat_summary(fun.y=max,
+                              geom="line",
+                              linetype='dashed',
+                              size=1,show.legend = F,
+                              aes(group=1,col='Max'))+
+  labs(title="Infant Mortality by Region in Mozambique Between 2000 to 2010",
+         caption="Source: DHS",
+         x="Province",
+         y="Number (per thousand)") +
+     theme(panel.background = element_rect(fill = "gray98",
+                                                    colour = "black"),
+                    plot.caption = element_text(hjust = 0), 
+                    plot.title = element_text(hjust = 0.5),
+                    plot.subtitle = element_text(hjust=0.5),
+                    legend.box.just = c("right","center"), 
+                    axis.text.x = element_text(size=9, angle = 40, vjust = 1, hjust=1)) 
+minsMaxs1
 ```
 
