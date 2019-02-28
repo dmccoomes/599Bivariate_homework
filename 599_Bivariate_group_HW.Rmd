@@ -1,6 +1,6 @@
 ## Course: Visual Analytics for Policy and Management
 ###Bivariate Homework 
-####Group 3: Dave Coomes, Quinhas Fernndes, Isabella Sun
+####Group 3: Dave Coomes, Quinhas Fernndes, Isabella Sun, Long Zong
 
 #### date : 02/27/2019 
 ## 
