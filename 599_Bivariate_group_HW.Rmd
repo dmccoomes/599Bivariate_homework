@@ -51,8 +51,7 @@ g + geom_boxplot(varwidth=T, fill="grey80") +
 
 Infant Mortality by Region in Mozambique Between 2000 to 2010
 
-**Guys, can you help me in figureing out how to get ride of the warning here about the misssing 4 rows?**
-```{r}
+```{r warning= FALSE }
 
 base2 = ggplot(df,aes(x=provname, y=INFANT_COMB))
 mins1 = base2 + stat_summary(fun.y=min, # function for 'y' is min()
