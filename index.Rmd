@@ -47,9 +47,8 @@ g + geom_boxplot(varwidth=T, fill="grey80") +
 ```
 
 
-Creating a line graph
 
-```{r warning= FALSE }
+```{r include= FALSE }
 
 base2 = ggplot(df,aes(x=provname, y=INFANT_COMB))
 mins1 = base2 + stat_summary(fun.y=min, # function for 'y' is min()
